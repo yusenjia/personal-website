@@ -1,0 +1,33 @@
+.nav-container{
+   
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: white;
+    padding-bottom: 1em;
+    border-bottom: 3px solid #46494f;
+    
+    .navbar{
+        
+        ul{
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 1.5rem;
+        }
+        a{
+            color: white;
+        }
+
+        li:hover{
+            transform: scale(1.4);
+            opacity: 0.8;
+        
+        }
+    }
+    
+    .link-item{
+        padding: 1em;
+        transition: transform 1s ease-in;
+    }
+}
