@@ -1,1 +1,42 @@
-/* No CSS *//*# sourceMappingURL=Navbar.css.map */
+.nav-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: white;
+  padding-bottom: 1em;
+  border-bottom: 3px solid #46494f;
+}
+
+.nav-container .navbar ul {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.5rem;
+}
+
+.nav-container .navbar a {
+  color: white;
+}
+
+.nav-container .navbar li:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  opacity: 0.8;
+}
+
+.nav-container .link-item {
+  padding: 1em;
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+/*# sourceMappingURL=Navbar.css.map */
