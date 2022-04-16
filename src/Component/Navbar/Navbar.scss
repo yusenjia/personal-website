@@ -1,33 +1,90 @@
 .nav-container{
-   
+    padding-top: 1em;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
     max-width: 1440px;
     margin: 0 auto;
-    color: white;
-    padding-bottom: 1em;
-    border-bottom: 3px solid #46494f;
+    padding: 10px 20px;
+    position: relative;
+   
     
-    .navbar{
-        
+    .logo{
+        font-size: 3rem;
+        letter-spacing: -10px;
+        span{
+            color: #3adc80;
+            font-size: 2rem;
+        }
+    }
+
+    .desktop-navbar{
+        text-transform: uppercase;
+        flex: 1;
+        max-width: 1000px;
+        display: none;
         ul{
-            justify-content: space-between;
-            align-items: flex-end;
-            font-size: 1.5rem;
+            justify-content: space-around;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: black;
         }
         a{
-            color: white;
+            padding: 10px 5px;
+            transition: color 0.2s ease-out;
+        }
+        a:hover,
+        a:focus{
+            color: #27E278;
+    
         }
 
-        li:hover{
-            transform: scale(1.4);
-            opacity: 0.8;
-        
+        @media (min-width:900px){
+            display: block;
+            justify-content: space-around;
         }
+
+    }
+
+}
+
+.mobile-nav-toggle{
+
+    width: 30px;
+    @media (min-width:900px){
+        display: none;
     }
     
-    .link-item{
-        padding: 1em;
-        transition: transform 1s ease-in;
+}
+
+.mobile-navbar{
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    top: 65px;
+    right: 0;
+    
+    text-align: left;
+    font-size: 1.3rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    background-color: beige;
+    
+ 
+
+    ul{
+        z-index: 111;
+        flex-direction: column;
+        justify-content: space-around;
+        height: inherit;
+
     }
+
+    @media (min-width:900px){
+        display:none;
+    }
+}
+
+.nav-active{
+    transform: translateX(0);
 }
