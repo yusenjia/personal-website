@@ -67,13 +67,21 @@
     left: 0;
     text-align: left;
     font-size: 1.1rem;  
-    background-color: rgba(241, 241, 241, 0.859);
+    background-color: white;
     transition: all 1s ease-out;
     text-transform: uppercase;
     box-shadow: inset 0px 12px 8px -4px rgba(61,61,61,0.74);
     text-align: center;
     z-index: 999;
- 
+    animation-name: slideDown;
+    animation-duration: 0.35s;
+    animation-timing-function: ease;	
+
+    a:hover,
+    a:focus{
+        color: #27E278;
+
+    }
     
     ul{
         flex-direction: column;
@@ -81,14 +89,20 @@
         height: inherit;
         padding-left: 20px;
         font-weight: 600;
-        color: black;
-            
-        
+        color: black;    
+
     }
 
     @media (min-width:900px){
         display:none;
     }
 }
-
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
 
