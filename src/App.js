@@ -12,10 +12,9 @@ function App() {
     <Router>
     <div className="App">
       <Navbar />
-      {/* <Project />
+      <Project />
       <Skill />
-      <Contact /> */}
-  
+      <Contact />
     </div>
     </Router>
   );
