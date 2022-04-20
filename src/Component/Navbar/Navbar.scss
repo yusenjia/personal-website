@@ -7,6 +7,7 @@
     margin: 0 auto;
     padding: 10px 20px;
     overflow: hidden;
+    margin-bottom: 1.2em;
     
     .logo{
         font-size: 3rem;
@@ -22,6 +23,7 @@
         flex: 1;
         max-width: 1000px;
         display: none;
+       
         ul{
             justify-content: space-around;
             font-size: 1.1rem;

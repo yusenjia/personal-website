@@ -4,6 +4,7 @@ import Contact from './Component/Contact/Contact';
 import Navbar from './Component/Navbar/Navbar';
 import Project from './Component/Projects/Project';
 import Skill from './Component/Skills/Skill';
+import Hero from "./Component/Hero/Hero"
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -12,9 +13,10 @@ function App() {
     <Router>
     <div className="App">
       <Navbar />
-      <Project />
+      <Hero />
+      {/* <Project />
       <Skill />
-      <Contact />
+      <Contact /> */}
     </div>
     </Router>
   );
