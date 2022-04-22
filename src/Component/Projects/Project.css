@@ -1,1 +1,33 @@
-/* No CSS *//*# sourceMappingURL=Project.css.map */
+.project-container {
+  background-color: #f6f7fd;
+  height: 500px;
+  margin-bottom: 3em;
+  position: f;
+}
+
+.project-list {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: #27E278;
+  border: 2px solid #27E278;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+}
+
+button:hover {
+  background-color: white;
+  color: #27E278;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+/*# sourceMappingURL=Project.css.map */

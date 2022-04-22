@@ -1,0 +1,30 @@
+.project-container{
+    background-color: rgb(246, 247, 253);
+    height: 500px;
+    margin-bottom: 3em;
+    position: f;
+}
+.project-list{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+button{
+    padding: 10px 30px;
+    background-color: #27E278;
+    border: 2px solid #27E278;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+button:hover{
+    background-color: white;
+    color: #27E278;
+    transition:color .15s ease-in-out,background-color .15s ease-in-out,
+}

@@ -17,9 +17,11 @@ a{
 
 
 }
-.App{
-  border-top: 10px solid #3adc80;
+.top{
+  position: sticky;
+  top: 0;
 }
+
 
 /* --blue: #007bff;
 --indigo: #6610f2;

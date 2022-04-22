@@ -1,11 +1,14 @@
 import React from "react";
 import "./Hero.css"
 
+
 export default function Hero(){
+    
     return(
         <div className="hero">
-
-            <h1>Hello, I'm Yusen Jiang</h1>
+            <div className="hero-content">
+                <h1 className="intro">Hello, I'm Yusen. <span>I'm a  <span className="roll">Front-end Developer.</span></span></h1>
+            </div>
         </div>
     )
 }
