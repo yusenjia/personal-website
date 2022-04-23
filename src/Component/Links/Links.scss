@@ -1,4 +1,7 @@
 .links-container{
       background-color: #3adc80;
       height: 50px;
+      @media (max-width:900px){
+            display: none;
+      }
 }

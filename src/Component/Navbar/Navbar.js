@@ -32,36 +32,38 @@ export default function Navbar(){
         }
     ]
     return(
-        <div className="nav-container flex">
-            <h1 className="logo">Y <span>J</span></h1>
-            <img src={showMobileNav? closeMenu : mobileNav} alt="mobile navigation" className="mobile-nav-toggle"
-            onClick={()=>setShowMobileNav(prev=>!prev)}/>
+        <div className="nav-container">
+            <div className="nav-content flex">
+                <h1 className="logo">Y <span>J</span></h1>
+                <img src={showMobileNav? closeMenu : mobileNav} alt="mobile navigation" className="mobile-nav-toggle"
+                onClick={()=>setShowMobileNav(prev=>!prev)}/>
 
-            {/* desktop nav */}
-            <div 
-            className="desktop-navbar">
-                <ul className="flex">
-                    {links.map((link,value)=>{
-                        return(
-                            <NavLink to={link.to}><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></NavLink>
-                        )
-                    })}
-                </ul>
-            </div>
-
-            {/* mobile nav */}
-
-            {showMobileNav &&
-                <div className={`mobile-navbar`}>
+                {/* desktop nav */}
+                <div 
+                className="desktop-navbar">
                     <ul className="flex">
                         {links.map((link,value)=>{
                             return(
-                                <NavLink to={link.to} ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></NavLink>
+                                <NavLink to={link.to}><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></NavLink>
                             )
                         })}
                     </ul>
                 </div>
-            }
+
+                {/* mobile nav */}
+
+                {showMobileNav &&
+                    <div className={`mobile-navbar`}>
+                        <ul className="flex">
+                            {links.map((link,value)=>{
+                                return(
+                                    <NavLink to={link.to} ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></NavLink>
+                                )
+                            })}
+                        </ul>
+                    </div>
+                }
+            </div>
 
         </div>
     )

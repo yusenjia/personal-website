@@ -17,8 +17,8 @@ export default function Skill(){
                 <li><img src={html} alt="html-icon" /></li>
                 <li><img src={css} alt="css-icon" /></li>
                 <li><img src={js} alt="js-icon" /></li>
-                <li><img src={scss} alt="scss-icon" /></li>
                 <li><img src={react} alt="react-icon" /></li>
+                <li><img src={scss} alt="scss-icon" /></li>
                 <li><img src={git} alt="git-icon" /></li>
                 <li><img src={mui} alt="mui-icon" /></li>
             </ul>

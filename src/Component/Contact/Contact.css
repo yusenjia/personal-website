@@ -1,1 +1,24 @@
-/* No CSS *//*# sourceMappingURL=Contact.css.map */
+.contact-container {
+  background-color: #f6f7fd;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.submit {
+  width: 150px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=Contact.css.map */

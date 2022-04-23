@@ -14,13 +14,13 @@ function App() {
     <Router>
     <div className="App">
       <div className="top">
-        {/* <Links /> */}
+        <Links />
         <Navbar />
       </div>
       <Hero />
        <Project />
       <Skill />
-      {/* <Contact />  */}
+      <Contact /> 
     </div>
     </Router>
   );
