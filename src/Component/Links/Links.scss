@@ -1,0 +1,7 @@
+.links-container{
+      background: linear-gradient(90deg, rgba(58,220,128,1) 21%, rgba(4,152,78,1) 98%);
+      height: 50px;
+      @media (max-width:900px){
+            display: none;
+      }
+}

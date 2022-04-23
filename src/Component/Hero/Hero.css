@@ -1,6 +1,29 @@
 .hero {
-  padding-left: 20px;
+  margin-bottom: 1em;
+}
+
+.hero-content {
+  padding: 20px;
   max-width: 1440px;
   margin: 0 auto;
+  font-family: Montserrat, sans-serif;
+}
+
+.hero-content .intro {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero-content .intro span {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  display: block;
+  font-weight: 500;
+}
+
+.hero-content .intro .roll {
+  display: inline;
+  color: #27e278;
 }
 /*# sourceMappingURL=Hero.css.map */

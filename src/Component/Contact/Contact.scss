@@ -1,0 +1,19 @@
+.contact-container{
+    background-color: rgb(246, 247, 253);
+    text-align: center;
+    padding: 20px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: white;
+
+ 
+}
+
+.submit{
+    width: 150px;
+    margin: 0 auto;
+}

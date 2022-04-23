@@ -5,6 +5,7 @@ import Navbar from './Component/Navbar/Navbar';
 import Project from './Component/Projects/Project';
 import Skill from './Component/Skills/Skill';
 import Hero from "./Component/Hero/Hero"
+import Links from './Component/Links/Links';
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -12,11 +13,14 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Navbar />
+      <div className="top">
+        <Links />
+        <Navbar />
+      </div>
       <Hero />
-      {/* <Project />
+       <Project />
       <Skill />
-      <Contact /> */}
+      <Contact /> 
     </div>
     </Router>
   );

@@ -1,1 +1,42 @@
-/* No CSS *//*# sourceMappingURL=Skill.css.map */
+.skills-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 3em;
+}
+
+.skills-container h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.skill-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.skill-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 800px) {
+  .skill-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=Skill.css.map */

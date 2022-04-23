@@ -1,0 +1,12 @@
+.links-container {
+  background: -webkit-gradient(linear, left top, right top, color-stop(21%, #3adc80), color-stop(98%, #04984e));
+  background: linear-gradient(90deg, #3adc80 21%, #04984e 98%);
+  height: 50px;
+}
+
+@media (max-width: 900px) {
+  .links-container {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Links.css.map */
