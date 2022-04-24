@@ -11,7 +11,7 @@ import git from "../../assets/icons8-git.svg"
 
 export default function Skill(){
     return(
-        <div className="skills-container">
+        <div className="skills-container" id="Skills">
             <h1>Skills</h1>
             <ul className="skill-list">
                 <li><img src={html} alt="html-icon" /></li>

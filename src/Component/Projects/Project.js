@@ -22,7 +22,7 @@ export default function Project(){
         }
     ]
     return(
-        <div className="project-container">
+        <div className="project-container" id="Projects">
             <div className="project-list">
                 <h1>Projects</h1>
             </div>

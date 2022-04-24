@@ -9,6 +9,7 @@ import Links from './Component/Links/Links';
 
 import { BrowserRouter as Router } from "react-router-dom";
 
+
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Navbar />
       </div>
       <Hero />
+
        <Project />
       <Skill />
       <Contact /> 

@@ -2,6 +2,12 @@
   background-color: #f6f7fd;
   text-align: center;
   padding: 20px;
+  padding-bottom: 3em;
+  margin-bottom: 10em;
+}
+
+.contact-container h1 {
+  margin-bottom: 1em;
 }
 
 .contact-form {
@@ -12,9 +18,19 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 300px;
+  max-width: 500px;
   margin: 0 auto;
   background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px 0px 0px 7px #DADDDA, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+          box-shadow: inset 0px 0px 0px 7px #DADDDA, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 500px) {
+  .contact-form {
+    padding: 20px;
+  }
 }
 
 .submit {
