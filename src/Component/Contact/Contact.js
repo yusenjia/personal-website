@@ -4,6 +4,7 @@ import "./Contact.css"
 import { TextField,TextareaAutosize } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import zIndex from "@mui/material/styles/zIndex";
 
 
 
@@ -23,11 +24,11 @@ export default function Contact(){
       };
     
     return(
-        <div className="contact-container">
+        <div className="contact-container" id="Contact">
             <h1>Contact Me</h1>
-                <form ref={form} onSubmit={sendEmail} className="contact-form">
-                    <TextField 
-                        id="outlined-required" 
+                <form ref={form} onSubmit={sendEmail} className="contact-form" >
+                    <TextField                     
+                        id="outlined-basic" 
                         label="Name"
                         variant="outlined" 
                         required 
@@ -41,7 +42,9 @@ export default function Contact(){
                         required 
                         variant="outlined" 
                         name="email"
+                        
                     />
+                    
 
                     <TextareaAutosize
                         required
@@ -49,6 +52,7 @@ export default function Contact(){
                         aria-label="empty textarea"
                         placeholder="Message"
                         style={{ maxWidth:400,marginBottom:20}}
+                        // style={{zIndex: 0}}
                         minRows={10}
                     />
                     <button className="submit" type="submit">SUBMIT</button>

@@ -1,13 +1,30 @@
 import React from "react"
 import "./Navbar.css"
-import { NavLink } from "react-router-dom";
 import mobileNav from "../../assets/list.svg"
 import closeMenu from "../../assets/icon-close.svg"
+import {NavHashLink} from "react-router-hash-link"
+import { NavLink } from "react-router-dom"
+import {Link} from 'react-scroll'
 
+
+
+
+// aovid content being covered up by fixed navibar
+const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -140; 
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
+}
 
 export default function Navbar(){
 
     const [showMobileNav,setShowMobileNav] = React.useState(false)
+    const [activeLink,setActiveLink] = React.useState(0)
+
+    function checkActive(link,index){
+        console.log(index)
+
+    }
 
     const links=[
         {
@@ -17,12 +34,12 @@ export default function Navbar(){
         },
         {
            "name": "Projects",
-           "to": "/projects",
+           "to": "/Projects",
            "id": 1, 
         },
         {
             "name": "Skills",
-            "to": "/skills",
+            "to": "/Skills",
             "id": 2,
         }, 
         {
@@ -42,9 +59,18 @@ export default function Navbar(){
                 <div 
                 className="desktop-navbar">
                     <ul className="flex">
-                        {links.map((link,value)=>{
+                        {links.map((link,index)=>{
                             return(
-                                <NavLink to={link.to}><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></NavLink>
+                                // on site navigation
+                                <Link  className="link" 
+                                    activeClass="active-menu"
+                                    to={link.name}
+                                    hashSpy={true}
+                                    spy={true} 
+                                    smooth={true}
+                                    offset={-150}
+                                    duration={300}
+                                ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></Link>
                             )
                         })}
                     </ul>
@@ -55,12 +81,21 @@ export default function Navbar(){
                 {showMobileNav &&
                     <div className={`mobile-navbar`}>
                         <ul className="flex">
-                            {links.map((link,value)=>{
-                                return(
-                                    <NavLink to={link.to} ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></NavLink>
-                                )
-                            })}
-                        </ul>
+                        {links.map((link,index)=>{
+                            return(
+                                // on site navigation
+                                <Link  className="link" 
+                                    activeClass="active-menu"
+                                    to={link.name}
+                                    hashSpy={true}
+                                    spy={true} 
+                                    smooth={true}
+                                    offset={-150}
+                                    duration={300}
+                                ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></Link>
+                            )
+                        })}
+                    </ul>
                     </div>
                 }
             </div>
