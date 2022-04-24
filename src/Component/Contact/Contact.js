@@ -4,26 +4,32 @@ import "./Contact.css"
 import { TextField,TextareaAutosize } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import { Alert } from '@mui/material';
+import { flexbox } from "@mui/system";
 
 
 export default function Contact(){
 
     const [email,setEmail] = React.useState()
+    const [emailFormat,setEmailFormat] = React.useState()
 
     const form = useRef();
     const sendEmail = (e) => {
 
+        // validate input than submit
         e.preventDefault();
-        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
-            emailjs.sendForm('service_ysc76nc', 'template_o02slfb', form.current, 'CsHn51mpkvYm3lP8_')
-              .then((result) => {
-                  console.log(result.text);
-              }, (error) => {
-                  console.log(error.text);
-              });   
-              form.current.reset()   
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+            setEmailFormat(false)
+ 
         } else{
-            alert("dididid")
+            setEmailFormat(true)
+            emailjs.sendForm('service_ysc76nc', 'template_o02slfb', form.current, 'CsHn51mpkvYm3lP8_')
+            .then((result) => {
+                alert("sucess")
+            }, (error) => {
+                console.log(error.text);
+            });   
+            form.current.reset()  
         }
       };
 
@@ -49,8 +55,16 @@ export default function Contact(){
                         variant="outlined" 
                         name="email"
                         onChange={(e)=>setEmail(e.target.value)}
-                        
                     />
+                    {!emailFormat &&
+                        <Alert 
+                            variant="outlined" 
+                            severity="error"
+                            style={{marginBottom:20,marginTop:-10, height:30,display:flexbox,alignItems:"center"}}
+                        >
+                            Wrong email format.
+                        </Alert>
+                    }
                     
                     <TextareaAutosize
                         required
