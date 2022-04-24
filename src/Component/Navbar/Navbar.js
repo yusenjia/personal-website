@@ -2,9 +2,8 @@ import React from "react"
 import "./Navbar.css"
 import mobileNav from "../../assets/list.svg"
 import closeMenu from "../../assets/icon-close.svg"
-import {NavHashLink} from "react-router-hash-link"
-import { NavLink } from "react-router-dom"
 import {Link} from 'react-scroll'
+import OutsideClickHandler from 'react-outside-click-handler';
 
 
 
@@ -25,6 +24,8 @@ export default function Navbar(){
         console.log(index)
 
     }
+
+    
 
     const links=[
         {
@@ -80,6 +81,11 @@ export default function Navbar(){
 
                 {showMobileNav &&
                     <div className={`mobile-navbar`}>
+
+                        {/* close when cliked outside cart section */}
+                    <OutsideClickHandler onOutsideClick={() => {
+                        setShowMobileNav(false)
+                    }}></OutsideClickHandler>
                         <ul className="flex">
                         {links.map((link,index)=>{
                             return(
