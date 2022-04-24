@@ -4,24 +4,30 @@ import "./Contact.css"
 import { TextField,TextareaAutosize } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
-import zIndex from "@mui/material/styles/zIndex";
-
-
 
 
 export default function Contact(){
 
+    const [email,setEmail] = React.useState()
+
     const form = useRef();
     const sendEmail = (e) => {
+
         e.preventDefault();
-        emailjs.sendForm('service_ysc76nc', 'template_o02slfb', form.current, 'CsHn51mpkvYm3lP8_')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });   
-          form.current.reset()   
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+            emailjs.sendForm('service_ysc76nc', 'template_o02slfb', form.current, 'CsHn51mpkvYm3lP8_')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });   
+              form.current.reset()   
+        } else{
+            alert("dididid")
+        }
       };
+
+  
     
     return(
         <div className="contact-container" id="Contact">
@@ -42,10 +48,10 @@ export default function Contact(){
                         required 
                         variant="outlined" 
                         name="email"
+                        onChange={(e)=>setEmail(e.target.value)}
                         
                     />
                     
-
                     <TextareaAutosize
                         required
                         name="message"

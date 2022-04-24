@@ -42,6 +42,8 @@ export default function Navbar(){
         }
     ]
     return(
+
+        // on click close move 
         <OutsideClickHandler
         onOutsideClick={() => {
           setShowMobileNav(false)
