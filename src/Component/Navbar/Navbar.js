@@ -18,14 +18,6 @@ const scrollWithOffset = (el) => {
 export default function Navbar(){
 
     const [showMobileNav,setShowMobileNav] = React.useState(false)
-    const [activeLink,setActiveLink] = React.useState(0)
-
-    function checkActive(link,index){
-        console.log(index)
-
-    }
-
-    
 
     const links=[
         {
@@ -50,6 +42,11 @@ export default function Navbar(){
         }
     ]
     return(
+        <OutsideClickHandler
+        onOutsideClick={() => {
+          setShowMobileNav(false)
+        }}
+      >
         <div className="nav-container">
             <div className="nav-content flex">
                 <h1 className="logo">Y <span>J</span></h1>
@@ -81,11 +78,6 @@ export default function Navbar(){
 
                 {showMobileNav &&
                     <div className={`mobile-navbar`}>
-
-                        {/* close when cliked outside cart section */}
-                    <OutsideClickHandler onOutsideClick={() => {
-                        setShowMobileNav(false)
-                    }}></OutsideClickHandler>
                         <ul className="flex">
                         {links.map((link,index)=>{
                             return(
@@ -107,5 +99,7 @@ export default function Navbar(){
             </div>
 
         </div>
+        </OutsideClickHandler>
     )
+   
 }
