@@ -4,24 +4,36 @@ import "./Contact.css"
 import { TextField,TextareaAutosize } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
-import zIndex from "@mui/material/styles/zIndex";
-
-
+import { Alert } from '@mui/material';
+import { flexbox } from "@mui/system";
 
 
 export default function Contact(){
 
+    const [email,setEmail] = React.useState()
+    const [emailFormat,setEmailFormat] = React.useState(true)
+
     const form = useRef();
+    
     const sendEmail = (e) => {
+        // validate input than submit
         e.preventDefault();
-        emailjs.sendForm('service_ysc76nc', 'template_o02slfb', form.current, 'CsHn51mpkvYm3lP8_')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });   
-          form.current.reset()   
+        //validate email format
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+            setEmailFormat(false)
+ 
+        } else{
+            setEmailFormat(true)
+            emailjs.sendForm('service_ysc76nc', 'template_o02slfb', form.current, 'CsHn51mpkvYm3lP8_')
+            .then((result) => {
+                alert("sucess")
+            }, (error) => {
+                console.log(error.text);
+            });   
+            form.current.reset()  
+        }
       };
+
     
     return(
         <div className="contact-container" id="Contact">
@@ -42,10 +54,18 @@ export default function Contact(){
                         required 
                         variant="outlined" 
                         name="email"
-                        
+                        onChange={(e)=>setEmail(e.target.value)}
                     />
+                    {!emailFormat &&
+                        <Alert 
+                            variant="outlined" 
+                            severity="error"
+                            style={{marginBottom:20,marginTop:-10, height:30,display:flexbox,alignItems:"center"}}
+                        >
+                            Wrong email format.
+                        </Alert>
+                    }
                     
-
                     <TextareaAutosize
                         required
                         name="message"

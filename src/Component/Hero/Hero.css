@@ -1,5 +1,5 @@
 .hero {
-  margin-bottom: 1em;
+  padding: 12em 0;
 }
 
 .hero-content {
@@ -7,23 +7,34 @@
   max-width: 1440px;
   margin: 0 auto;
   font-family: Montserrat, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero-content .intro {
-  font-size: 70px;
+  font-size: 6rem;
   font-weight: 700;
   margin-bottom: 25px;
 }
 
-.hero-content .intro span {
-  font-size: 1.5rem;
+.roll {
+  font-size: 2rem;
   margin-top: 25px;
   display: block;
   font-weight: 500;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
-.hero-content .intro .roll {
-  display: inline;
+.roll span {
   color: #27e278;
 }
 /*# sourceMappingURL=Hero.css.map */

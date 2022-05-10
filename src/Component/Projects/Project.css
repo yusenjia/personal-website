@@ -1,17 +1,28 @@
 .project-container {
   background-color: #f6f7fd;
-  height: 500px;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
+  padding-bottom: 5em;
 }
 
 .project-list {
   max-width: 1440px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
 }
 
-button {
+.title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.project-title {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #292b2c;
+}
+
+.primary-btn {
   padding: 10px 30px;
   background-color: #27E278;
   border: 2px solid #27E278;
@@ -23,10 +34,93 @@ button {
   font-family: 'Roboto', sans-serif;
 }
 
-button:hover {
+@media (min-width: 1024px) {
+  .primary-btn {
+    font-size: 1.2rem;
+  }
+}
+
+.primary-btn:hover {
   background-color: white;
   color: #27E278;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.sk {
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+img {
+  width: clamp(250px, 100%, 1200px);
+  margin-bottom: 0.75em;
+}
+
+.tech-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 5px;
+  margin-bottom: 1.5em;
+}
+
+.tech {
+  background-color: blue;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  padding: 0.6em 5px;
+  border: lightgray 3px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(250, 250, 250, 0.908);
+}
+
+@media (min-width: 1024px) {
+  .tech {
+    font-size: 1.2rem;
+  }
+}
+
+.project-description {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  color: #666666;
+  margin-bottom: 0.75em;
+}
+
+@media (min-width: 1024px) {
+  .project-description {
+    font-size: 1.5rem;
+  }
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  .btns {
+    max-width: 800px;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    gap: 30px;
+  }
 }
 /*# sourceMappingURL=Project.css.map */
