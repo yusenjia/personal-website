@@ -11,13 +11,14 @@ import { flexbox } from "@mui/system";
 export default function Contact(){
 
     const [email,setEmail] = React.useState()
-    const [emailFormat,setEmailFormat] = React.useState()
+    const [emailFormat,setEmailFormat] = React.useState(true)
 
     const form = useRef();
+    
     const sendEmail = (e) => {
-
         // validate input than submit
         e.preventDefault();
+        //validate email format
         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
             setEmailFormat(false)
  
@@ -33,7 +34,6 @@ export default function Contact(){
         }
       };
 
-  
     
     return(
         <div className="contact-container" id="Contact">

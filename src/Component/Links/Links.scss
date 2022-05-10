@@ -1,7 +1,54 @@
 .links-container{
       background: linear-gradient(90deg, rgba(58,220,128,1) 21%, rgba(4,152,78,1) 98%);
-      height: 50px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      
       @media (max-width:900px){
             display: none;
       }
+}
+
+.primary-btnm{
+      padding: 10px 30px;   
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+      cursor: pointer;
+      text-transform: capitalize;
+      font-family: 'Roboto', sans-serif;
+      --borderWidth: 3px;
+      position: relative;
+      border-radius: var(--borderWidth);
+      background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+      animation: animatedgradient 3s ease alternate infinite;
+      z-index: 1;
+  }
+
+      //ranbow animation bg
+  .primary-btnm:after {
+      content: '';
+      position: absolute;
+      top: calc(-1 * var(--borderWidth));
+      left: calc(-1 * var(--borderWidth));
+      height: calc(100% + var(--borderWidth) * 2);
+      width: calc(100% + var(--borderWidth) * 2);
+      background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+      z-index: -1;
+      animation: animatedgradient 5s ease alternate infinite;
+      background-size: 300% 300%;
+    }
+
+
+    @keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 100%;
+	}
 }

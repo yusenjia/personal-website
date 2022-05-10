@@ -1,31 +1,32 @@
 .hero{
-    margin-bottom: 1em;
-    
+
+    padding: 12em 0;   
 }
+
 .hero-content{
     padding:20px;
     max-width: 1440px;
     margin: 0 auto;
     font-family: Montserrat, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     .intro{
-        font-size: 70px;
+        font-size: 6rem;
         font-weight: 700;
         margin-bottom: 25px;
-        span{
-            font-size: 1.5rem;
-            margin-top: 25px;
-            display: block;
-            font-weight: 500;
-        }
-        .roll{
-            display: inline;
-            color: rgb(39, 226, 120);
-        }
     }
 }
-// .hero{
-//     background-image: url(../../assets/bgimg.jpeg);
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position-y:-25px ;
-// }
+.roll{
+    font-size: 2rem;
+    margin-top: 25px;
+    display: block;
+    font-weight: 500;
+    max-width: 600px;
+    line-height: 1.5;
+    span{
+        color: rgb(39, 226, 120);
+    }
+}
