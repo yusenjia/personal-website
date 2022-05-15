@@ -123,4 +123,9 @@ img {
     gap: 30px;
   }
 }
+
+.link {
+  color: purple;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=Project.css.map */
