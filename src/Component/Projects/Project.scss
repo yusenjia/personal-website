@@ -27,7 +27,7 @@
 }
 .project-title{
     margin-bottom: 1em;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-family: "Montserrat", sans-serif;
     color: #292b2c;
 }
@@ -101,6 +101,7 @@ img{
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    margin-bottom: 3em;
     
     @include tablet-size(){
         max-width: 800px;
@@ -110,7 +111,7 @@ img{
 
 }
 
-.link{
+.link-a{
     color: purple;
     text-decoration: underline;
 }

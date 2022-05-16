@@ -72,4 +72,21 @@
     background-position: 0% 100%;
   }
 }
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+
+.social-links img {
+  width: 35px;
+  margin-bottom: 0;
+}
 /*# sourceMappingURL=Links.css.map */

@@ -52,3 +52,16 @@
 		background-position: 0% 100%;
 	}
 }
+
+
+.social-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+
+    img{
+        width: 35px;
+        margin-bottom: 0;
+    }
+}
