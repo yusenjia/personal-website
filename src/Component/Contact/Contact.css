@@ -34,7 +34,23 @@
 }
 
 .submit {
-  width: 150px;
+  padding: 10px 30px;
+  background-color: #27E278;
+  border: 2px solid #27E278;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  width: 60%;
   margin: 0 auto;
+}
+
+.submit:hover {
+  background-color: white;
+  color: #27E278;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 /*# sourceMappingURL=Contact.css.map */

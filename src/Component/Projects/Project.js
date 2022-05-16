@@ -76,7 +76,7 @@ export default function Project(){
                     <div className="project-info">
                         <h3 className="project-title">Space Tour</h3>
                         <img src={space} alt="app screenshot" />
-                        <p className="project-description">A clone project from <a href="https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3" target="_blank" className="link">Frontend Mentor</a></p>
+                        <p className="project-description">A clone project from <a href="https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3" target="_blank" className="link-a">Frontend Mentor</a></p>
                         
                         <p className="sk">Tech Used </p>
                         <div className="tech-list">
