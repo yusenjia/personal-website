@@ -6,6 +6,12 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { Alert } from '@mui/material';
 import { flexbox } from "@mui/system";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content';
+import { icon } from "@fortawesome/fontawesome-svg-core";
+
+
+
 
 
 export default function Contact(){
@@ -26,11 +32,37 @@ export default function Contact(){
             setEmailFormat(true)
             emailjs.sendForm('service_ysc76nc', 'template_o02slfb', form.current, 'CsHn51mpkvYm3lP8_')
             .then((result) => {
-                alert("sucess")
+
+                // customize message 
+                Swal.fire(
+                    {
+                        title: 'Message send！',
+                        icon:"success",
+                        timer:"2000",
+                        showConfirmButton:false,   
+                        padding:"2rem",   
+                    }
+                  )
+
+                              
+                form.current.reset()  
+    
             }, (error) => {
-                console.log(error.text);
-            });   
-            form.current.reset()  
+
+                Swal.fire(
+                    {
+                        title: 'Ops, something went wrong！',
+                        icon:"error",
+                        timer:"2000",
+                        showConfirmButton:false,   
+                        padding:"2rem",   
+                    }
+                  )
+
+            }); 
+            
+      
+
         }
       };
 
