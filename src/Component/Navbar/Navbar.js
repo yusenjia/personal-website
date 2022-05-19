@@ -60,7 +60,7 @@ export default function Navbar(){
                                     hashSpy={true}
                                     spy={true} 
                                     smooth={true}
-                                    offset={-1100}
+                                    offset={-900}
                                     duration={300}
                                 ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></Link>
                             )
