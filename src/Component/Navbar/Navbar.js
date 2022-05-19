@@ -7,14 +7,6 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 
 
-
-// aovid content being covered up by fixed navibar
-const scrollWithOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -100; 
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' }); 
-}
-
 export default function Navbar(){
 
     const [showMobileNav,setShowMobileNav] = React.useState(false)
@@ -68,7 +60,7 @@ export default function Navbar(){
                                     hashSpy={true}
                                     spy={true} 
                                     smooth={true}
-                                    offset={-150}
+                                    offset={-1100}
                                     duration={300}
                                 ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></Link>
                             )

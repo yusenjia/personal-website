@@ -1,7 +1,8 @@
 .hero{
 
     padding: 12em 0;   
-
+    background: rgb(248,254,249);
+    background: radial-gradient(circle, rgba(248,254,249,1) 76%, rgba(39,226,120,0.5) 97%);
 }
 
 .hero-content{
@@ -10,14 +11,14 @@
     margin: 0 auto;
     font-family: Montserrat, sans-serif;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+ 
     .intro{
         font-size: 6rem;
         font-weight: 700;
         margin-bottom: 25px;
+        animation: slide-in-fwd-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+ 
+      
     }
 }
 .roll{
@@ -27,7 +28,40 @@
     font-weight: 500;
     max-width: 600px;
     line-height: 1.5;
+    margin-bottom: 20px;
+    animation: slide-in-fwd-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
     span{
         color: rgb(39, 226, 120);
     }
 }
+
+.roll-in{
+
+    animation: roll-in-left 1s ease-out 0.5s both;
+   
+}
+  @keyframes slide-in-fwd-left {
+    0% {
+              transform: translateZ(-1400px) translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateZ(0) translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+              transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  
