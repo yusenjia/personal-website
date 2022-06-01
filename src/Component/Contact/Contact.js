@@ -1,26 +1,15 @@
 import React from "react";
 import "./Contact.css"
-// import TextField from '@mui/material/TextField';
 import { TextField,TextareaAutosize } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import { Alert } from '@mui/material';
 import { flexbox } from "@mui/system";
 import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content';
-import { icon } from "@fortawesome/fontawesome-svg-core";
-
-
-
-
-
 export default function Contact(){
-
     const [email,setEmail] = React.useState()
     const [emailFormat,setEmailFormat] = React.useState(true)
-
     const form = useRef();
-    
     const sendEmail = (e) => {
         // validate input than submit
         e.preventDefault();
@@ -44,7 +33,6 @@ export default function Contact(){
                     }
                   )
 
-                              
                 form.current.reset()  
     
             }, (error) => {
@@ -60,13 +48,9 @@ export default function Contact(){
                   )
 
             }); 
-            
-      
-
         }
       };
-
-    
+      
     return(
         <div className="contact-container" id="Contact">
             <h1>Contact Me</h1>
