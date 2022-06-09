@@ -8,7 +8,7 @@ export default function Links(){
         <div className="links-container">
             <h1>Email:yusenjsx@gmail.com</h1>
             <div className="social-links">
-                <button className="primary-btnm" onClick={()=>window.open("personal-website/resume.pdf", "_blank")}>Resume</button>
+                <button className="primary-btnm" onClick={()=>window.open("/personal-website/resume.pdf", "_blank")}>Resume</button>
                 <a href="https://github.com/yusenjia" target="_blank"><img src={github} alt="" /></a>
                 <a href="https://github.com/yusenjia" target="_blank"><img src={linkedin} alt="" /></a>
             </div>
