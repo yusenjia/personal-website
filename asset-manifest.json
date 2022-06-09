@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personal-website/static/css/main.3f8e69a5.css",
-    "main.js": "/personal-website/static/js/main.8670a010.js",
+    "main.js": "/personal-website/static/js/main.1139f62d.js",
     "static/media/space-tour.png": "/personal-website/static/media/space-tour.6659aad4a0297658f467.png",
     "static/media/fast-food.png": "/personal-website/static/media/fast-food.e483bdfd2bcb6687ef8e.png",
     "static/media/quiz-app.png": "/personal-website/static/media/quiz-app.686506c0e1c8c1392119.png",
@@ -18,10 +18,10 @@
     "static/media/list.svg": "/personal-website/static/media/list.f98b98b4905b36b844a65327ecaadc32.svg",
     "static/media/icon-close.svg": "/personal-website/static/media/icon-close.99b2f15e33c4465c52728ac9e476fcbe.svg",
     "main.3f8e69a5.css.map": "/personal-website/static/css/main.3f8e69a5.css.map",
-    "main.8670a010.js.map": "/personal-website/static/js/main.8670a010.js.map"
+    "main.1139f62d.js.map": "/personal-website/static/js/main.1139f62d.js.map"
   },
   "entrypoints": [
     "static/css/main.3f8e69a5.css",
-    "static/js/main.8670a010.js"
+    "static/js/main.1139f62d.js"
   ]
 }
