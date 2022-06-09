@@ -53,6 +53,7 @@ export default function Navbar(){
                     <ul className="flex">
                         {links.map((link,index)=>{
                             return(
+                                
                                 // on site navigation
                                 <Link  className="link" 
                                     activeClass="active-menu"
@@ -60,7 +61,7 @@ export default function Navbar(){
                                     hashSpy={true}
                                     spy={true} 
                                     smooth={true}
-                                    offset={-900}
+                                    offset={-890}
                                     duration={300}
                                 ><li onClick={()=>setShowMobileNav(false)}>{link.name}</li></Link>
                             )
