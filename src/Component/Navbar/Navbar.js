@@ -1,7 +1,7 @@
 import React from "react"
 import "./Navbar.css"
 import mobileNav from "../../assets/list.svg"
-import closeMenu from "../../assets/icon-close.svg"
+import closeMenu from "../../assets/icons8-close.png"
 import {Link} from 'react-scroll'
 import OutsideClickHandler from 'react-outside-click-handler';
 

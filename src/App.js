@@ -12,7 +12,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
+    <Router basename="personal-website">
     <div className="App">
       <div className="top">
         <Links />

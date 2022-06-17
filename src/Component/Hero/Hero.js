@@ -9,9 +9,9 @@ export default function Hero(){
             <div className="hero-content">
                 <h1 className="intro">Hello, I'm Yusen. </h1>
                 
-                <p className="roll">I'm a <span>Front-end Developer</span> with a passion for create responsive & functional websites.                
+                <p className="roll">I'm a <span>Front-end Developer</span> with passion on create responsive &#38; functional websites.                
                 </p>
-    <button className="primary-btn roll-in">            <a href="https://yusenjia.github.io/quiz-app" target="_blank">Resume</a></button>
+                <button className="primary-btn roll-in" onClick={()=>window.open("/personal-website/resume.pdf", "_blank")}>Resume</button>
             </div>
         </div>
     )

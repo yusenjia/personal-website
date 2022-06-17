@@ -87,8 +87,7 @@ export default function Contact(){
                         name="message"
                         aria-label="empty textarea"
                         placeholder="Message"
-                        style={{ maxWidth:400,marginBottom:20}}
-                        // style={{zIndex: 0}}
+                        style={{ maxWidth:600, marginBottom:20,fontSize:16,paddingLeft:15,paddingTop:5,fontFamily:"inherit",borderRadius:5}}
                         minRows={10}
                     />
                     <button className="submit" type="submit">SUBMIT</button>
