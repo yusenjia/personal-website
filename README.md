@@ -1,3 +1,3 @@
 # Personal Website
 
-Personal website created using React.
+Personal website created using React Js.
